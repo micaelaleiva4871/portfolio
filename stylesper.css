@@ -1,0 +1,130 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto Mono", serif;
+    color: #333333; /* Gris oscuro */
+    background-color: #f1f1f1; /* Gris claro */
+    line-height: 1.6; /*interlineado */
+}
+/* Encabezado */
+header nav ul {
+    list-style: none; /*desactiva el modo lista */
+    display: flex;
+    gap: 1.5rem; /* separacion de palabras */
+    justify-content:flex-end;
+}
+nav ul li a {
+    text-decoration: none; /*decoracion del texto dasactivado*/
+    color: #333333;
+    font-weight: bold; /* negrita */
+    transition: color 0.3s ease; /* cambio de color cuandos pasas el cursor por encima */
+}
+nav ul li a:hover {
+    color: #f0a6b5; /* Rosa suave */
+}
+.container {
+    width: 90%;/*ancho del cuadro de texto general, que espacio ocupa en la pantalla */ /* max-width ancho maximo, cuando se agranda la pagina */
+    margin: 0 auto;
+    padding: 2rem 0; /* espaciado */
+}
+h2 {
+    color: #f0a6b5; /* Rosa suave */
+    margin-bottom: 1rem;
+}
+/* Sección de servicios */
+#servicios ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* interlineado entre oraciones */
+}
+#servicios ul li {
+    background: #ffffff;
+    padding: 1rem;
+    border-left: 4px solid #f0a6b5; /* Rosa suave */
+    border-radius: 5px;
+}
+.fotoperfil{
+    border: #333333 solid 2px;
+    padding: 0px 1em 0px 1em; /*arriba derecha, abajo izquierda*/
+    /*border-radius , redondea los bordes con valor en porcentaje*/
+
+}
+.item{
+    background-color: #f0a6b5;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+}
+.item:hover{
+    background-color: aquamarine;
+
+}
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#mensaje{
+    width: 50em;
+    padding: 50px;
+}
+button{
+    background-color: #f0a6b5;
+    color:#333333;
+    padding: 10px 20px 10px 20px;
+}
+button:hover{
+    color:aquamarine;
+}
+#acerca-de-mi{
+    width: 60%;
+}
+
+/*menu solo mostrar en mobiles*/
+#check{
+    display: none;
+}
+.checkbtn {
+    font-size: 20px;
+    color: rgb(7, 7, 7);
+    float: right;/*flotado a la derecha*/
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer; /*manito cursor*/
+    display: none;
+}
+ /* Estilos para pantallas más pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    .checkbtn{
+        display: block;
+    }
+    #check:checked ~ ul{
+        display: block;
+        left: 0%;
+    }
+    ul {
+        position:fixed;
+        width: 50%;
+        height: 40vh; /*largo que ocupa de la pantalla*/
+        background:#f0a6b5;
+        top: 80px;
+        left: 100%; /*que ocupe toda la pantalla*/
+        text-align:center;
+        transition: all 0.5s;
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+    }
+
+    }/* Aquí puedes escribir los estilos que se aplicarán en pantallas más pequeñas */
